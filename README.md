@@ -15,4 +15,9 @@ L'auteur a un nom et un fichier AVATAR.
 
 ## TODO
 
-- Template HTML
+- Inclure le template HTML avec la table des artistes
+- Inclure le template HTML avec la table des galleries
+- Inclure la page de contact-us
+- Modifier le LOGO
+- Ajouter des bannieres
+- Page Admin pour ajouter des données ?
