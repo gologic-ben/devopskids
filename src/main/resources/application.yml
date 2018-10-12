@@ -1,0 +1,33 @@
+###
+#   Database Settings
+###
+spring:
+  datasource:
+#    url: jdbc:h2:mem:devopskids;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:file:./data/devopskids;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        format_sql: false
+
+###
+#   H2 Settings
+###
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+        
+###
+#   Security
+###
+  security: 
+    user: 
+      name: gologic
+      password: gologic

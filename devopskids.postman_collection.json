@@ -1,0 +1,364 @@
+{
+	"variables": [],
+	"info": {
+		"name": "devopskids",
+		"_postman_id": "1cb227e5-6947-9932-e4d7-665741ea7cb6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "kids",
+			"description": "",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"url": "http://localhost:8080/api/admin/kids",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list drawings",
+					"request": {
+						"url": "http://localhost:8080/api/admin/kids/xavier/drawings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "http://localhost:8080/api/admin/kids/Xavier",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"url": "http://localhost:8080/api/admin/kids",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"xavier\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add avatar",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1/drawings/xavier",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "tux-vegeta.gif"
+								},
+								{
+									"key": "title",
+									"value": "vegeta",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "gologic",
+								"password": "gologic",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "http://localhost:8080/api/admin/kids/Xavier",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Xavier\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gallery",
+			"description": "",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list drawings",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1/drawings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"La livraison continue\",\n\t\"date\": \"2018-01-01\",\n\t\"description\": \"Allez exprime toi sur la livraison continue ! Yo men check ma bedaine !!!\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"La livraison continue\",\n\t\"date\": \"2018-01-01\",\n\t\"description\": \"Allez exprime toi sur la livraison continue ! Yo men check ma bedaine !!!\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add preview",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1/drawings/xavier",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "tux-vegeta.gif"
+								},
+								{
+									"key": "title",
+									"value": "vegeta",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "gologic",
+								"password": "gologic",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "http://localhost:8080/api/admin/galleries/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic Z29sb2dpYzpnb2xvZ2lj",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Xavier\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add drawing",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1/drawings/xavier",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "tux-vegeta.gif"
+								},
+								{
+									"key": "title",
+									"value": "vegeta",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete drawing",
+					"request": {
+						"url": "http://localhost:8080/api/admin/galleries/1/drawings/123",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
