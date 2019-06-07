@@ -1,5 +1,7 @@
 # DevOps kids
 
+Objectifs: Faire un site pour collecter des dessins d'enfants imaginant plusieurs aspects du DevOps
+
 ## Liens
 
 ## API
